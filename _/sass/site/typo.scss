@@ -1,0 +1,35 @@
+/* Typo Styles
+-------------------------------------------------------------------------------*/
+
+a {
+    transition: color 0.25s ease;
+}
+
+.has-large-font-size {
+    font-size: $font-size-lg;
+}
+
+.has-regular-font-size {
+    font-size: $font-size-base;
+}
+
+.has-small-font-size {
+    font-size: $font-size-sm;
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+b, strong {
+    font-weight: 700;
+}
+
+.text-large-italic {
+    @include font-size(26px);
+    font-style: italic;
+}
