@@ -7,6 +7,7 @@
     <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/_/img/favicon.ico"
           type="image/x-icon">
     <link rel="icon" href="<?php echo get_stylesheet_directory_uri(); ?>/_/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://use.typekit.net/cbo4kmx.css">
 
 
     <?php wp_head(); ?>
@@ -16,9 +17,20 @@
 <div class="content-wrap">
     <header class="site-navigation">
 
-        <a class="home-link mr-auto" href="<?php echo home_url(); ?>">
-            <img alt="Memedia" src="<?php echo get_stylesheet_directory_uri() . "/_/img/logo.svg" ?>">
-        </a>
+        <div class="icon-nav-wrapper">
+            <a href="" class="instagram nav-icon">
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/_/img/instagram.svg" alt="instagram">
+            </a>
+            <a href="" class="facebook nav-icon">
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/_/img/facebook-square.svg" alt="facebook">
+            </a>
+            <a href="" class="youtube nav-icon">
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/_/img/youtube.svg" alt="youtube">
+            </a>
+            <a href="" class="twitter nav-icon">
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/_/img/twitter.svg" alt="twitter">
+            </a>
+        </div>
 
         <nav class="main-menu">
             <?php wp_nav_menu(array(

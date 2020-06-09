@@ -1,1 +1,48 @@
+.site-navigation {
+    width: 100%;
+    background: black;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    left: 0;
 
+    .nav-icon {
+        margin: 0 5px;
+    
+        img {
+            width: 18px;
+        }
+    }
+
+    .main-menu {
+
+        li, a {
+            font-family: brandon-grotesque, sans-serif;
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 0.8px;
+            font-weight: 400;
+
+            &:hover {
+                color: #D90E0F;
+            }
+
+        }
+
+        .current_page_item  {
+
+            a {
+                color: #D90E0F;
+                font-weight: 900;
+                font-style: normal;
+            }
+
+        }
+        
+        
+    }
+
+
+}
