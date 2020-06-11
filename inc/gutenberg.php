@@ -1,22 +1,22 @@
 <?php
 
-function mm_block_category($categories, $post)
+function univerzes_block_category($categories, $post)
 {
     return array_merge(
         $categories,
         array(
             array(
-                'slug' => 'mm-blocks',
-                'title' => 'MM Blocks',
+                'slug' => 'univerzes-blocks',
+                'title' => 'Univerzes-Blocks',
             ),
         )
     );
 }
 
-add_filter('block_categories', 'mm_block_category', 10, 2);
+add_filter('block_categories', 'univerzes_block_category', 10, 2);
 
 
-function mm_acf_block_render_callback($block)
+function univerzes_acf_block_render_callback($block)
 {
 
     // convert name ("acf/testimonial") into path friendly slug ("testimonial")
@@ -27,8 +27,8 @@ function mm_acf_block_render_callback($block)
     }
 }
 
-add_action('acf/init', 'mm_acf_init');
-function mm_acf_init()
+add_action('acf/init', 'univerzes_acf_init');
+function univerzes_acf_init()
 {
     // check function exists
     if (function_exists('acf_register_block')) {
@@ -38,10 +38,24 @@ function mm_acf_init()
             'name' => 'about',
             'title' => 'About',
             'description' => 'About Block',
-            'render_callback' => 'mm_acf_block_render_callback',
-            'category' => 'mm-blocks',
+            'render_callback' => 'univerzes_acf_block_render_callback',
+            'category' => 'univerzes-blocks',
             'icon' => 'admin-home',
-            'keywords' => array('about', 'mm'),
+            'keywords' => array('about', 'univerzes'),
+            'supports' => array(
+                'align' => false,
+                'anchor' => true,
+            ),
+        ));
+
+        acf_register_block(array(
+            'name' => 'banner',
+            'title' => 'Banner',
+            'description' => 'A Banner Block',
+            'render_callback' => 'univerzes_acf_block_render_callback',
+            'category' => 'univerzes-blocks',
+            'icon' => 'admin-home',
+            'keywords' => array('banner', 'univerzes'),
             'supports' => array(
                 'align' => false,
                 'anchor' => true,
