@@ -61,5 +61,47 @@ function univerzes_acf_init()
                 'anchor' => true,
             ),
         ));
+        
+        acf_register_block(array(
+            'name' => 'headline',
+            'title' => 'Headline',
+            'description' => 'A Headline Block with Option of lines',
+            'render_callback' => 'univerzes_acf_block_render_callback',
+            'category' => 'univerzes-blocks',
+            'icon' => 'admin-home',
+            'keywords' => array('Headlines', 'univerzes'),
+            'supports' => array(
+                'align' => false,
+                'anchor' => true,
+            ),
+        ));
+
+        acf_register_block(array(
+            'name' => 'headline-line-bottom',
+            'title' => 'Headline with Line beneath',
+            'description' => 'A Headline Block with Line beneath',
+            'render_callback' => 'univerzes_acf_block_render_callback',
+            'category' => 'univerzes-blocks',
+            'icon' => 'admin-home',
+            'keywords' => array('Headlines', 'univerzes'),
+            'supports' => array(
+                'align' => false,
+                'anchor' => true,
+            ),
+        ));
+
+        acf_register_block(array(
+            'name' => 'multiple-social-media',
+            'title' => 'Mulitple Social Media Icons',
+            'description' => 'A Block for multiple Social Media Icons',
+            'render_callback' => 'univerzes_acf_block_render_callback',
+            'category' => 'univerzes-blocks',
+            'icon' => 'admin-home',
+            'keywords' => array('Social Media', 'univerzes'),
+            'supports' => array(
+                'align' => false,
+                'anchor' => true,
+            ),
+        ));
     }
 }
