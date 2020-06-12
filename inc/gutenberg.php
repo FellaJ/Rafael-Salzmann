@@ -103,5 +103,19 @@ function univerzes_acf_init()
                 'anchor' => true,
             ),
         ));
+
+        acf_register_block(array(
+            'name' => 'tilted-wrapper',
+            'title' => 'Block with tilted angle',
+            'description' => 'A Block with tilted angle in the middle',
+            'render_callback' => 'univerzes_acf_block_render_callback',
+            'category' => 'univerzes-blocks',
+            'icon' => 'admin-home',
+            'keywords' => array('Block', 'univerzes', 'wrapper'),
+            'supports' => array(
+                'align' => false,
+                'anchor' => true,
+            ),
+        ));
     }
 }
