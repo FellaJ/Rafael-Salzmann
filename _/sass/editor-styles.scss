@@ -1,0 +1,29 @@
+// Core variables and mixins
+@import "custom-bootstrap.scss";
+
+/* Fonts */
+@import "site/fonts.scss";
+
+.editor-styles-wrapper {
+    .wp-block {
+        font-family: $font-family-sans-serif;
+        //@include make-container();
+        @include make-container-max-widths();
+
+        &[data-align=full] {
+            max-width: none;
+        }
+
+        // For Visibility in the Backend
+        &.editor-block-list__block[data-type="core/group"] {
+            border: 2px solid $green;
+        }
+    }
+
+    @import "site/typo.scss";
+    @import "site/helper.scss";
+
+    /* Block Styles */
+    @import "blocks/blocks.scss";
+}
+

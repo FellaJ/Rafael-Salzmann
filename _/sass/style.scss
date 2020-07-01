@@ -1,0 +1,40 @@
+/*!
+Theme Name: Memedia
+Theme URI: http://abc.de
+Author: Mario Dobelmann
+Description: A Memedia Theme
+Version: 1.0.0
+Text Domain: mm
+*/
+
+/*--------------------------------------------------------------
+# 3rd Party Styles
+--------------------------------------------------------------*/
+
+@import "site/fonts.scss";
+@import "custom-bootstrap.scss";
+
+/*--------------------------------------------------------------
+# Site Styles
+--------------------------------------------------------------*/
+
+@import "site/typo.scss" ;
+@import "site/layout.scss";
+@import "site/form.scss" ;
+@import "site/header.scss" ;
+@import "site/navigation.scss";
+@import "site/footer.scss";
+@import "site/helper.scss" ;
+@import "site/shortcodes.scss" ;
+
+/*--------------------------------------------------------------
+# Block Styles
+--------------------------------------------------------------*/
+
+@import "site/wp-blocks.scss" ;
+@import "blocks/blocks.scss";
+@import "blocks/about.scss";
+@import "blocks/banner.scss";
+@import "blocks/headline.scss";
+@import "blocks/headline_line_bottom.scss";
+@import "blocks/tilted-wrapper.scss";

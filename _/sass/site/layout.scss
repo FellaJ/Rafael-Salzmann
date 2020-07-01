@@ -1,0 +1,50 @@
+.content-wrap {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    background: black;
+}
+
+.page-content {
+
+    > section:first-child {
+        margin-top: 0;
+    }
+
+    .alignleft {
+        float: left;
+        margin-right: $spacer;
+    }
+
+    .alignright {
+        float: right;
+        margin-left: $spacer;
+    }
+
+    .aligncenter {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .alignwide {
+        width: 100%;
+        max-width: 100%;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .alignfull {
+        width: calc(100% + 32px);
+        max-width: 100vw;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+
+        @include media-breakpoint-up(xl) {
+            width: 100vw;
+        }
+    }
+}
