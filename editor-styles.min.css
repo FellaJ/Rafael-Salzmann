@@ -411,6 +411,7 @@ a.text-green-light:hover,a.text-green-light:focus{color:#cbcd2d !important}
 .editor-styles-wrapper b,.editor-styles-wrapper strong{font-weight:700}
 .editor-styles-wrapper .text-large-italic{font-size:1.625rem;font-style:italic}
 .editor-styles-wrapper p{font-family:Lato,sans-serif;font-size:16px;line-height:30px;color:white;font-weight:300}
+.editor-styles-wrapper h6{font-family:brandon-grotesque,sans-serif;text-transform:uppercase;font-size:18px;letter-spacing:.9px}
 .editor-styles-wrapper body{text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-weight:normal}
 .editor-styles-wrapper body.menu-open{overflow:hidden}
 .editor-styles-wrapper nav ul{list-style:none;padding:0;margin:0}

@@ -26,7 +26,7 @@ if( have_rows($repeater_field) ):
         
                 ?>
                 <div class="tilted_block_wrapper">
-                    <div class="image_left" style="background: url(<?php echo $image ?>)"></div>
+                    <div class="image_left" style="background: url('<?php echo $image ?>')"></div>
                     <div class="content-right" style="background: <?php echo $background_color ?>;">
                         <h6 class="headline"><?php echo $headline ?></h6>
                         <p class="text"><?php echo $background_color ?></p>
@@ -47,11 +47,11 @@ if( have_rows($repeater_field) ):
         
                 ?>
                 <div class="tilted_block_wrapper">
-                    <div class="content-right" style="background: <?php echo $background_color ?>;">
+                    <div class="content-left" style="background: url('<?php echo $image ?>')">
                         <h6 class="headline"><?php echo $headline ?></h6>
                         <p class="text"><?php echo $background_color ?></p>
                     </div>
-                    <div class="image_left" style="background: url(<?php echo $image ?>)"></div>
+                    <div class="image_right" style="background: url('<?php echo $image ?>')"></div>
                 </div>
             <?php endwhile; 
         endif;

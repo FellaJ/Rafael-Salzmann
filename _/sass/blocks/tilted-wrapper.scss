@@ -1,0 +1,40 @@
+.tilted_block_wrapper {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+
+
+    .content-left, .content-right {
+        width: 40%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0px 100px;
+
+        @include media-breakpoint-down(sm) {
+            width: 100%;
+        }
+    }
+
+    .image_left, .image_right {
+        width: 60%;
+        height: 100%;
+        background-size: cover !important;
+
+        
+        @include media-breakpoint-down(sm) {
+            width: 100%;
+        }
+
+    }
+
+    .image_left {
+        clip-path: polygon(0 0, 100% 0%, 83.25% 100%, 0% 100%);
+    }
+
+    .image_right {
+        clip-path: polygon(16.75% 0, 100% 0%, 100% 100%, 0 100%);
+    }
+}
