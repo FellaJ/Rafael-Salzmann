@@ -131,5 +131,19 @@ function univerzes_acf_init()
                 'anchor' => true,
             ),
         ));
+
+        acf_register_block(array(
+            'name' => 'contact-option',
+            'title' => 'Contact Options List',
+            'description' => 'A List of Contact Options',
+            'render_callback' => 'univerzes_acf_block_render_callback',
+            'category' => 'univerzes-blocks',
+            'icon' => 'admin-home',
+            'keywords' => array('Block', 'univerzes', 'tilted'),
+            'supports' => array(
+                'align' => false,
+                'anchor' => true,
+            ),
+        ));
     }
 }

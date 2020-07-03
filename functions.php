@@ -79,6 +79,7 @@ function dh_gutenberg_assets() {
 remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 remove_action( 'wp_print_styles', 'print_emoji_styles' );
 
+add_filter('wpcf7_autop_or_not', '__return_false');
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
