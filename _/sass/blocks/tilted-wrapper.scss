@@ -1,8 +1,89 @@
+.bands_section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    .wp-block-group__inner-container {
+        margin-left: 0;
+        margin-right: 0;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+
+    .tilted_block_wrapper {
+        width: 100%;
+        height: 500px;
+        display: flex;
+        flex-wrap: wrap;
+
+        @include media-breakpoint-down(md) {
+            margin-bottom: 500px;
+        }
+    
+        .content-left, .content-right {
+            width: 40%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            padding: 0px 100px;
+    
+            @include media-breakpoint-down(md) {
+                width: 100%;
+                padding: 0 15px;
+            }
+        }
+
+        .content-right {
+            @include media-breakpoint-down(md) {
+                background: #db0f10;
+            }
+        }
+    
+        .image_left, .image_right {
+            width: 60%;
+            height: 100%;
+            background-size: cover !important;
+    
+            
+            @include media-breakpoint-down(sm) {
+                width: 100%;
+            }
+    
+        }
+    
+        .image_left {
+            clip-path: polygon(0 0, 100% 0%, 83.25% 100%, 0% 100%);
+    
+            @include media-breakpoint-down(md) {
+                clip-path: none;
+                margin-bottom: 25px;
+                background-position: center !important;
+            }
+        }
+    
+        .image_right {
+            clip-path: polygon(16.75% 0, 100% 0%, 100% 100%, 0 100%);
+
+            @include media-breakpoint-down(md) {
+                clip-path: none;
+                margin-bottom: 25px;
+                background-position: center !important;
+            }
+        }
+    }
+}
+
 .tilted_block_wrapper {
     width: 100%;
     height: 500px;
     display: flex;
     flex-wrap: wrap;
+
+
 
 
     .content-left, .content-right {
@@ -13,8 +94,9 @@
         flex-direction: column;
         padding: 0px 100px;
 
-        @include media-breakpoint-down(sm) {
+        @include media-breakpoint-down(md) {
             width: 100%;
+            padding: 0 15px;
         }
     }
 
@@ -32,9 +114,28 @@
 
     .image_left {
         clip-path: polygon(0 0, 100% 0%, 83.25% 100%, 0% 100%);
+
+        @include media-breakpoint-down(md) {
+            clip-path: none;
+            margin-bottom: 25px;
+        }
     }
 
     .image_right {
         clip-path: polygon(16.75% 0, 100% 0%, 100% 100%, 0 100%);
     }
+}
+
+// Odd number tilted wrapper styles+
+
+.tilted_odd {
+    margin-top: 0;
+    flex-wrap: wrap-reverse;
+
+    @include media-breakpoint-down(md) {
+        margin-top: 500px;
+        flex-wrap: wrap-reverse !important;    
+        margin-bottom: 100px !important;
+    }
+
 }

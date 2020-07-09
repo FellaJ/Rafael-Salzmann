@@ -12,7 +12,7 @@ $background_color = get_field('background_color');
 
 <?php if ( get_field( 'enable_image_right' ) ): ?>
 
-    <div class="tilted_block_wrapper" style="background: <?php echo $background_color ?>;">
+    <div class="tilted_block_wrapper tilted_odd" style="background: <?php echo $background_color ?>;">
         <div class="content-left">
             <h6 class="headline"><?php echo $headline ?></h6>
             <p class="text"><?php echo $text ?></p>
